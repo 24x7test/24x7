@@ -259,8 +259,10 @@ document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/tru
                     }, 600, 'swing', function() {
 
                         window.location.hash = target;
-                        $("#menu-one-page a").hasClass("scrolldownmenu").removeClass("scrolldownmenu");
-//jQuery(this).addClass("scrolldownmenu");
+                       
+						if( $("#menu-one-page a").hasClass("scrolldownmenu") ){
+							$("#menu-one-page a").removeClass("scrolldownmenu");
+						}
                     });
                 });
 
