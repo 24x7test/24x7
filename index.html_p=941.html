@@ -53,6 +53,7 @@
   #rs-demo-id {}
   </style>
   <link rel='stylesheet' id='theme-components-css' href='css/components.css' type='text/css' media='all' />
+  <link rel='stylesheet' id='theme-animate-css' href='css/animate.css' type='text/css' media='all' />
   <link rel='stylesheet' id='theme-css' href='css/style.css' type='text/css' media='all' />
   <style id='theme-inline-css' type='text/css'>
   #site-header #site-navigator .menu>li a {
@@ -821,6 +822,7 @@
   </script>
   <script type='text/javascript' src='js/scripts.js'></script>
   <script type='text/javascript' src='js/components.js'></script>
+  <script type='text/javascript' src='js/wow.min.js'></script>
   <script type='text/javascript'>
   /* <![CDATA[ */
   var _themeConfig = { "stickyHeader": "1", "responsiveMenu": "1", "blogLayout": null, "pagingStyle": "numeric", "pagingContainer": "#main-content > .main-content-wrap > .content-inner", "pagingNavigator": ".navigation.paging-navigation.loadmore" };
@@ -828,6 +830,23 @@
   </script>
   <script type='text/javascript' src='js/theme.js'></script>
   <script type='text/javascript' src='js/wp-embed.min.js'></script>
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
 </body>
 
 </html>
