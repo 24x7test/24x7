@@ -11,10 +11,10 @@
 }
 .pulse{-webkit-animation-name:pulse;animation-name:pulse;}
 
-@-webkit-keyframes slideInTop{0%{opacity:0;-webkit-transform:translateY(211px);transform:translateY(211px);}
+@-webkit-keyframes slideInTop{0%{opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px);}
 100%{-webkit-transform:translateY(0);transform:translateY(0);}
 }
-@keyframes slideInTop{0%{opacity:0;-webkit-transform:translateY(211px);-ms-transform:translateY(211px);transform:translateY(211px);}
+@keyframes slideInTop{0%{opacity:0;-webkit-transform:translateY(50px);-ms-transform:translateY(50px);transform:translateY(50px);}
 100%{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);}
 }
 .slideInTop{-webkit-animation-name:slideInTop;animation-name:slideInTop;}
